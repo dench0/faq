@@ -57,7 +57,7 @@
   }
   $(document).ready(function () {
     $(document).on('contextmenu', function(e) {
-      if ($(e.target).is(".mi-download-link")) {
+      if ($(e.target).is(".mi-download-link") || $(e.target).parents(".mi-download-link").length != 0) {
         return false;
       } else {
         return true;
