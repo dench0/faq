@@ -31,7 +31,7 @@
   }
 
   function get_mi_filename(url){
-    var re = /^.*\/([^\/]+\.[^.]+)$/;
+    var re = /([^\/]+)$/; ///^.*\/([^\/]+\.[^.]+)$/;
     var result = re.exec(url)
     if (result[1] != undefined){
       return result[1];
