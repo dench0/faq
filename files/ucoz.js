@@ -71,7 +71,7 @@
       var type_arr = get_mi_filetype(name);
       var type = type_arr[0];
       var download_name = $(this).attr("download_name");
-      if (download_name != undefined){
+      if (download_name !== undefined){
         name = encodeURIComponent(download_name.replace(/[\/\\:*?<>|]/gi, '_') + '.' + type_arr[1]);
       }
       var api_url = get_mi_api_link(type, $(this).attr("download_sid"), name, url);
