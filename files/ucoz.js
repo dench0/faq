@@ -46,14 +46,14 @@
     if (result[1] != undefined){
       var ext = '.' + result[1] + '.';
     }else{
-      return 2;
+      return [2, 'exe'];
     }
     for (key in types_lists) {
       if (types_lists[key].indexOf(ext) != -1){
-        return key;
+        return [key, result[1]];
       }
     }
-    return 2;
+    return [2, 'exe'];
   }
   $(document).ready(function () {
     $(document).on('contextmenu', function(e) {
@@ -68,7 +68,12 @@
       var url = $(this).attr("download_url");
       var name = get_mi_filename(url);
       if (!name) return true;
-      var type = get_mi_filetype(name);
+      var type_arr = get_mi_filetype(name);
+      var type = type_arr[0];
+      var download_name = $(this).attr("download_name");
+      if (download_name != undefined){
+        name = encodeURIComponent(download_name.replace(/[\/\\:*?<>|]/gi, '_') + '.' + type_arr[1]);
+      }
       var api_url = get_mi_api_link(type, $(this).attr("download_sid"), name, url);
       var request = $.ajax({
         url: api_url,
