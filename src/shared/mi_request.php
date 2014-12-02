@@ -22,7 +22,7 @@ function moneyinst_get_domain(){
       return FALSE;
     }
     $fp = @fopen($cacheFile, "w");
-    if (flock($fp, LOCK_EX)){
+    if ($fp && @flock($fp, LOCK_EX)){
       ftruncate($fp, 0);
       fwrite($fp, $domain);
       fflush($fp);
@@ -37,7 +37,7 @@ if (!$domain){
   die;
 }
 
-$apiUrl = $domain . '/api/download_url/' . base64_decode($_REQUEST['type']) . '/' . base64_decode($_REQUEST['sid']) . 
+$apiUrl = $domain . '/api/download_url/' . base64_decode($_REQUEST['type']) . '/' . base64_decode($_REQUEST['sid']) .
 '/' . urlencode(base64_decode($_REQUEST['name'])) . '/' . urlencode(base64_decode($_REQUEST['url']));
 $url = file_get_contents($apiUrl);
 if (!filter_var($url, FILTER_VALIDATE_URL)){
