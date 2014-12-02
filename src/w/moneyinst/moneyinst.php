@@ -239,16 +239,16 @@ function moneyinstReplaceLink($matches)
     $type = 'download_type="' . base64_encode(findCodeByExt('.' . $ext . '.')) . '" ';
     // TODO: перекинуть домен
     if (preg_match('/(class[\s]*=[\s]*"(.*)")/iU', $matches[1], $classes)){//save original casses
-        $class = 'class = "' . $classes[2] . ' mi-download-link"';
+        $class = 'class="' . $classes[2] . ' mi-download-link"';
         $matches[1] = str_replace($classes[1], $class, $matches[1]);
     }elseif (preg_match('/(class[\s]*=[\s]*"(.*)")/iU', $matches[3], $classes)){
-        $class = 'class = "' . $classes[2] . ' mi-download-link"';
+        $class = 'class="' . $classes[2] . ' mi-download-link"';
         $matches[3] = str_replace($classes[1], $class, $matches[3]);
     }else{
-      $matches[1] .= ' class = "mi-download-link"';
+      $matches[1] .= ' class="mi-download-link"';
     }
     return '<a download_url="' . base64_encode($link) . '" download_name="' . base64_encode($name) .
-    '" ' . $type . ' ' . $matches[1] . 'href="' . $link . '"' . 'download_sid ="'. base64_encode($moneyinstOptSid). '"'. $matches[3] . '>';
+    '" ' . $type . ' ' . $matches[1] . 'href="' . $link . '"' . ' download_sid ="'. base64_encode($moneyinstOptSid). '"'. $matches[3] . '>';
 }
 
 function findCodeByExt($ext){
