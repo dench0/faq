@@ -30,7 +30,7 @@ module.exports = function(grunt) {
         dest: 'src/j/moneyinst/mi-clear.js',
         options: {
           process: function (content, srcpath) {
-            content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g,"/plugins/content/moneyinst/mi_request.php");
+            content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g,"/plugins/system/moneyinst/mi_request.php");
             return content;
           },
         },
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
         dest: 'src/j25/moneyinst/mi-clear.js',
         options: {
           process: function (content, srcpath) {
-            content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g,"/plugins/content/moneyinst/mi_request.php");
+            content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g,"/plugins/system/moneyinst/mi_request.php");
             return content;
           },
         },

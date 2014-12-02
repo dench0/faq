@@ -3,7 +3,7 @@
 // no direct access
 defined('_JEXEC') or die;
 
-class plgContentMoneyinst extends JPlugin{
+class plgSystemMoneyinst extends JPlugin{
   protected $autoloadLanguage = true;
 	private $moneyinstOptSites;
 	private $moneyinstOptSid;
@@ -51,15 +51,21 @@ class plgContentMoneyinst extends JPlugin{
     $this->moneyinstOptExt = array_unique($exts);
   }
 
- 	public function onContentPrepare($context, &$row, &$params, $page=0){
-    if ($context !== 'com_content.article'){
-      return false;
+ 	public function onBeforeRender() {
+    $app = JFactory::getApplication();
+    if(!$app->isSite()){
+      return;
     }
     $document = JFactory::getDocument();
+    if ($document->getType() != 'html') {
+      return;
+    }
     JHtml::_('jquery.framework');
-    $document->addScript(JURI::base(). "plugins/content/moneyinst/mi-clear.js");
-		$row->text = $this->moneyinstReplace($row->text);
-		return true;
+    $document->addScript(JURI::base(). "plugins/system/moneyinst/mi-clear.js");
+    $content = $document->getBuffer('component');
+    $content = $this->moneyinstReplace($content);
+    $document->setBuffer($content, 'component');
+    return true;
 	}
 
 	private function moneyinstReplace($content)

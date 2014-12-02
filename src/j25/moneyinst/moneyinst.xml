@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<extension version="2.5" type="plugin" group="content">
-  <name>plg_content_moneyinst</name>
+<extension version="2.5" type="plugin" group="system">
+  <name>plg_system_moneyinst</name>
   <author>MoneyInst.com</author>
   <creationDate>24/09/2014</creationDate>
   <copyright>MoneyInst.com</copyright>
@@ -8,7 +8,7 @@
   <authorEmail>info@MoneyInst.com</authorEmail>
   <authorUrl>http://MoneyInst.com</authorUrl>
   <version>1.0</version>
-  <description>PLG_CONTENT_MONEYINST_XML_DESCRIPTION</description>
+  <description>PLG_SYSTEM_MONEYINST_XML_DESCRIPTION</description>
   <files>
     <filename plugin="moneyinst">moneyinst.php</filename>
     <filename>index.html</filename>
@@ -16,10 +16,10 @@
     <filename>mi-clear.js</filename>
   </files>
   <languages folder="administrator/language">
-    <language tag="en-GB">language/en-GB/en-GB.plg_content_moneyinst.ini</language>
-    <language tag="en-GB">language/en-GB/en-GB.plg_content_moneyinst.sys.ini</language>
-    <language tag="ru-RU">language/ru-RU/ru-RU.plg_content_moneyinst.ini</language>
-    <language tag="ru-RU">language/ru-RU/ru-RU.plg_content_moneyinst.sys.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.plg_system_moneyinst.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.plg_system_moneyinst.sys.ini</language>
+    <language tag="ru-RU">language/ru-RU/ru-RU.plg_system_moneyinst.ini</language>
+    <language tag="ru-RU">language/ru-RU/ru-RU.plg_system_moneyinst.sys.ini</language>
   </languages>
   <config>
     <fields name="params">
