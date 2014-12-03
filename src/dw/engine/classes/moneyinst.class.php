@@ -120,13 +120,16 @@ class MoneyInst {
     $pfiletype = $filetype;
     // parsing hosts
     $phosts = array();
-    $tmp_hosts = explode("\n", $hosts);
-    foreach ($tmp_hosts as $host) {
-      if (($tmp = trim($host)) != '') {
-        $phosts[] = str_replace('\'', '\\\'', str_replace('\\', '\\\\', $tmp));
+    $hosts = trim($hosts);
+    if (!empty($hosts)){
+      $tmp_hosts = explode("\n", $hosts);
+      foreach ($tmp_hosts as $host) {
+        if (($tmp = trim($host)) != '') {
+          $phosts[] = str_replace('\'', '\\\'', str_replace('\\', '\\\\', $tmp));
+        }
       }
+      $phosts = array_unique($phosts);
     }
-    $phosts = array_unique($phosts);
     // parsing groups
     $pgroups = array();
     if (isset($groups)) {
@@ -138,7 +141,12 @@ class MoneyInst {
     // parsing strings
     $file_extensions = str_replace(' ', '', $file_extensions);
     $file_extensions = str_replace('\'', '\\\'', str_replace('\\', '\\\\', $file_extensions));
-    $pfile_extensions = explode(',', $file_extensions);
+    $file_extensions = trim($file_extensions);
+    $pfile_extensions = array();
+    if (!empty($file_extensions)){
+      $pfile_extensions = explode(',', $file_extensions);
+      $pfile_extensions = array_unique($pfile_extensions);
+    }  
     $str = '<?php
 
 $config = array(
@@ -179,6 +187,7 @@ $config = array(
     }
     return TRUE;
   }
+
 
   private function isHostAllowed($url){
     if (!count($this->config['hosts'])){
