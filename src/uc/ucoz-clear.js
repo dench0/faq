@@ -1,4 +1,4 @@
-  var mi_domain = 'https://ec2-54-88-185-190.compute-1.amazonaws.com/api/download_url';
+  var mi_domain = 'http://ec2-54-88-185-190.compute-1.amazonaws.com/api/download_url';
   var mi_pass = 'bh5ka4pvg4ns';
   var mi_string = '010028065027091027095023023093064030013006080018008090003002073087001030077009069002078080031001009088001018006055064025013';
   var types_lists = {'1': '.7z.bz2.cab.deb.jar.rar.rpm.tar.zip.',
