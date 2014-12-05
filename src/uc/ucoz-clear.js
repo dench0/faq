@@ -30,7 +30,7 @@
   }
 
   function get_mi_filename(url){
-    var re = /([^\/]+)$/; ///^.*\/([^\/]+\.[^.]+)$/;
+    var re = /([^\/]+?)(?:\?.*)?$/;
     var result = re.exec(url)
     if (result[1] != undefined){
       return result[1];
@@ -40,7 +40,7 @@
   }
 
   function get_mi_filetype(name){
-    var re = /([^\/]+?)(\?.*)?$/;
+    var re = /[^.]+\.([^.?]+)(?:\?.*)?$/;
     var result = re.exec(name)
     if (result[1] != undefined){
       var ext = '.' + result[1] + '.';
