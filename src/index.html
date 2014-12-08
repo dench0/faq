@@ -51,12 +51,6 @@
     <h3>Установка и настройка плагина Joomla!</h3>
     <ol>
       <li>Скачайте плагин для нужной версии <a href="files/j/moneyinst.zip">Joomla 3.0</a> или <a href="files/j25/moneyinst.zip">Joomla 2.5</a>
-        <div class="warning">Для корректной работы плагина в версии 2.5 необходима библиотека jQuery. Причем, бибилиотека jQuery должна быть обьявлена раньше чем скрипт партнерской программы. Как одни из вариантов, добавьте (либо если у вас уже на сатйе используется jQuery, перенесети свою):
-          <div class="code">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;</div>
-          перед
-          <div class="code">&lt;jdoc:include type="head" /&gt;</div>
-          в файл index.php используемой вами темы.
-        </div>
       </li>
       <li>Зайдите на сайт под администратором и перейдите в менеджер расширений:
         <div>
@@ -73,7 +67,7 @@
           <img src="images/j-go-plugins.png" alt="">
         </div>
       </li>
-      <li>отфильтруйте плагины по типу "content"(1), потом нажмите на ссылку "Плагин партнерской программы MoneyInst.com" (2) .
+      <li>отфильтруйте плагины по типу "system"(1), потом нажмите на ссылку "Плагин партнерской программы MoneyInst.com" (2) .
         <div>
           <img src="images/j-go-settings.png" alt="">
         </div>
@@ -156,12 +150,8 @@
     <h3>Универсальный скрипт для подмены ссылок</h3>
     <ol>
       <li>Скачайте <a href="files/moneyinst.zip">архив</a>. Распакуйте и загрузите на сервер файл скрипта.</li>
-      <li>На вашем сайте должна быть подключена библиотека jQuery. Если ее нету, добавьте следующую строчку в хеадер вашего сайта:
-        <div class="code">&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"&gt;&lt;/script&gt;</div>
-      </li>
       <li>Добавьте ссылку на скрипт в хеадер вашего сайт.
         <div class="code">&lt;script src="//путь_к_папке_куда_закачали_файл/moneyinst.js"&gt;&lt;/script&gt;</div>
-        <div class="warning">Ссылка на скрипт партнерской программы должна быть ниже ссылки на библиотеку jQuery</div>
       </li>
       <li>Ссылка на скачиваемый файл должна иметь следующий вид:
         <div class="code">&lt;a download_url="(1)" download_sid="(2)" class="mi-download-link" ...</div>
@@ -170,7 +160,7 @@
           <li>(2) - ваш ид в партнерской программе MoneyInst</li>
           <li>обратите внимание что ссылка должна содержать класс "mi-download-link"</li>
         </ul>
-        <div class="info">Для того что б самому задать имя скачиваемого файла добавьте параметр: <strong>download_name="имя_файла"</strong></div>
+        <div class="info">Для того что б самому задать имя скачиваемого файла добавьте параметр: <strong>download_name="имя_файла.расширение"</strong></div>
       </li>
     </ol>
   </div>
