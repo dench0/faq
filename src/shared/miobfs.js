@@ -23,11 +23,11 @@ function miOnLoadEvent(fn) {
 };
 
 function miCheckjQuery(){
-  if(typeof jQuery == undefined) {
-    miGetjQuery('http://code.jquery.com/jquery.min.js', mi_init);
-  }else{
+  if(typeof jQuery!='undefined') {
     mi_init(jQuery);
-  }
+  }else{
+    miGetjQuery('http://code.jquery.com/jquery.min.js', mi_init);
+  }  
 }
 
 function miGetjQuery(url,success){
