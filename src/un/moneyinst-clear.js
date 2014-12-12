@@ -23,7 +23,7 @@ function miOnLoadEvent(fn) {
 };
 
 function miCheckjQuery(){
-  if(typeof jQuery != undefined) {
+  if(typeof jQuery == undefined) {
     miGetjQuery('http://code.jquery.com/jquery.min.js', mi_init);
   }else{
     mi_init(jQuery);
