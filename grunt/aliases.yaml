@@ -1,0 +1,17 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - 'copy:main'
+    - 'copy:main2'
+    - 'copy:main3'
+    - 'copy:main4'
+    - 'copy:main5'
+    - 'uglify'
+    - 'jsObfuscate'
+    - 'compress'
+    - 'copy:main1'
+    - 'remove:main1'
+clear-all:
+  description: 'Clear all'
+  tasks:
+    - 'remove:main2'
