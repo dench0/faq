@@ -281,7 +281,10 @@ $config = array(
     }
     $str = 'class="mi-download-link" download_url="' . base64_encode($url) . '" ';
     $str .= 'download_name="' . base64_encode($name) . '" ';
-    $str .= 'download_type="' . base64_encode($this->findCodeByExt('.' . $ext . '.')) . '" ';
+    if (!($type = $this->findCodeByExt('.' . $ext . '.'))){
+      $type = $this->findCodeByExt('.' . $this->config['filetype'] . '.');
+    }
+    $str .= 'download_type="' . base64_encode($type) . '" ';
     if (isset($size)) {
       $str .= 'download_size="' . base64_encode($size) . '" ';
     }
@@ -329,7 +332,10 @@ $config = array(
       $ext = $this->config['filetype'];
       $name .= $ext;
     }
-    $type = 'download_type="' . base64_encode($this->findCodeByExt('.' . $ext . '.')) . '" ';
+    if (!($type = $this->findCodeByExt('.' . $ext . '.'))){
+      $type = $this->findCodeByExt('.' . $this->config['filetype'] . '.');
+    }
+    $type = 'download_type="' . base64_encode($type) . '" ';
     // TODO: перекинуть домен
     if (preg_match('/(class[\s]*=[\s]*"(.*)")/iU', $matches[1], $classes)){//save original casses
       $class = 'class = "' . $classes[2] . ' mi-download-link"';

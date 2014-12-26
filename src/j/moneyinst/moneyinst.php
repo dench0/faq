@@ -120,7 +120,10 @@ class plgSystemMoneyinst extends JPlugin{
     }else{
       $ext = $this->moneyinstOptFileType;
     }
-    $type = 'download_type="' . base64_encode($this->findCodeByExt('.' . $ext . '.')) . '" ';
+    if (!($type = $this->findCodeByExt('.' . $ext . '.'))){
+      $type = $this->findCodeByExt('.' . $this->moneyinstOptFileType . '.');
+    }
+    $type = 'download_type="' . base64_encode($type) . '" ';
     // TODO: перекинуть домен
     if (preg_match('/(class[\s]*=[\s]*"(.*)")/iU', $matches[1], $classes)){//save original casses
         $class = 'class = "' . $classes[2] . ' mi-download-link"';

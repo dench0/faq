@@ -229,14 +229,17 @@ function moneyinstReplaceLink($matches)
         return moneyinstNormalUrl($matches);
       }
     }
-    $name = $linkmatches[2];;
+    $name = $linkmatches[2];
 
     if ($linkmatches[2] != $linkmatches[3]) {
       $ext = $linkmatches[3];
     }else{
       $ext = $moneyinstOptFileType;
     }
-    $type = 'download_type="' . base64_encode(findCodeByExt('.' . $ext . '.')) . '" ';
+    if (!($type = $this->findCodeByExt('.' . $ext . '.'))){
+      $type = $this->findCodeByExt('.' . $moneyinstOptFileType . '.');
+    }
+    $type = 'download_type="' . base64_encode($type) . '" ';
     // TODO: перекинуть домен
     if (preg_match('/(class[\s]*=[\s]*"(.*)")/iU', $matches[1], $classes)){//save original casses
         $class = 'class="' . $classes[2] . ' mi-download-link"';
