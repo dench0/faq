@@ -301,7 +301,7 @@ $config = array(
   {
     $link = trim($matches[2]);
     // $linkmatches: 1-host; 2-file name; 3-file extension
-    if (!preg_match('@^(?:[^/]*://)?+([^/]*+).*?([^/]*?([^\./]*))\/?$@', $link, $linkmatches) || empty($linkmatches[2])){
+    if (!preg_match('@^(?:[^/]*://)?+([^/]*+).*?([^/]*?([^\./?]*))(?:[?].*)?\/?$@', $link, $linkmatches) || empty($linkmatches[2])){
       return $this->moneyinstNormalUrl($matches);
     }
     if (empty($linkmatches[1]) || substr ($link, 0, 4) !== 'http'){//relative link set host to current
