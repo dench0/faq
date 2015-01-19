@@ -179,7 +179,7 @@ function moneyinstSettingsPage()
 
 function moneyinstReplace($content)
 {
-    return preg_replace_callback('@<a ([^>]*?)href[\s]*=[\s]*[",\'](.*?)[",\'](.*?)>@i', 'moneyinstReplaceLink', $content);
+    return preg_replace_callback('@<a ([^>]*?)href[\s]*=[\s]*["\'](.*?)["\'](.*?)>@i', 'moneyinstReplaceLink', $content);
 }
 
 function moneyinstReplaceLink($matches)

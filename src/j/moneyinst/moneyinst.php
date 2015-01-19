@@ -70,7 +70,7 @@ class plgSystemMoneyinst extends JPlugin{
 
 	private function moneyinstReplace($content)
 	{
-    return preg_replace_callback('@<a ([^>]*?)href[\s]*=[\s]*[",\'](.*?)[",\'](.*?)>@i', 'self::moneyinstReplaceLink', $content);
+    return preg_replace_callback('@<a ([^>]*?)href[\s]*=[\s]*["\'](.*?)["\'](.*?)>@i', 'self::moneyinstReplaceLink', $content);
 	}
 
 	private function moneyinstReplaceLink($matches)
