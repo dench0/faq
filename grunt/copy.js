@@ -92,7 +92,8 @@ module.exports = {
     dest: 'src/php/moneyinst/moneyinst.js',
     options: {
       process: function(content, srcpath) {
-        content = content.replace(/= get_mi_api_link/g, "= get_mi_api_link_php");
+        content = content.replace(/function get_mi_api_link[^]+?return result;[^]*?}/gmi, "");
+        content = content.replace(/var api_url = get_mi_api_link/gi, "var api_url = get_mi_api_link_php");
         return content;
       },
     },

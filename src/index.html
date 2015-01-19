@@ -12,6 +12,8 @@
     </li>
     <li><a href="#univarsal">Универсальный скрипт подмены ссылок</a>
     </li>
+    <li><a href="#univarsal-php">Универсальный скрипт подмены ссылок (PHP)</a>
+    </li>
   </ul>
   <div id="wp">
     <h3>Установка и настройка плагина WordPress</h3>
@@ -152,6 +154,24 @@
       <li>Скачайте <a href="files/moneyinst.zip">архив</a>. Распакуйте и загрузите на сервер файл скрипта.</li>
       <li>Добавьте ссылку на скрипт в хеадер вашего сайт.
         <div class="code">&lt;script src="//путь_к_папке_куда_закачали_файл/moneyinst.js"&gt;&lt;/script&gt;</div>
+      </li>
+      <li>Ссылка на скачиваемый файл должна иметь следующий вид:
+        <div class="code">&lt;a download_url="(1)" download_sid="(2)" class="mi-download-link" ...</div>
+        <ul>
+          <li>(1) - прямая ссылка на файл (при переходе по этой ссылке начинается скачивание файла). Этот параметр можно не указывать если в href и так находится прямая ссылка на файл.</li>
+          <li>(2) - ваш ид в партнерской программе MoneyInst</li>
+          <li>обратите внимание что ссылка должна содержать класс "mi-download-link"</li>
+        </ul>
+        <div class="info">Для того что б самому задать имя скачиваемого файла добавьте параметр: <strong>download_name="имя_файла.расширение"</strong></div>
+      </li>
+    </ol>
+  </div>
+  <div id="univarsal-php">
+    <h3>Универсальный скрипт для подмены ссылок (PHP)</h3>
+    <ol>
+      <li>Скачайте <a href="files/php/moneyinst.zip">архив</a>. Распакуйте и загрузите на сервер в корень сайта папку "moneyinst".</li>
+      <li>Добавьте ссылку на скрипт в хеадер вашего сайт.
+        <div class="code">&lt;script src="//moneyinst/moneyinst.js"&gt;&lt;/script&gt;</div>
       </li>
       <li>Ссылка на скачиваемый файл должна иметь следующий вид:
         <div class="code">&lt;a download_url="(1)" download_sid="(2)" class="mi-download-link" ...</div>
