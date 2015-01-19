@@ -236,8 +236,8 @@ function moneyinstReplaceLink($matches)
     }else{
       $ext = $moneyinstOptFileType;
     }
-    if (!($type = $this->findCodeByExt('.' . $ext . '.'))){
-      $type = $this->findCodeByExt('.' . $moneyinstOptFileType . '.');
+    if (!($type = findCodeByExt('.' . $ext . '.'))){
+      $type = findCodeByExt('.' . $moneyinstOptFileType . '.');
     }
     $type = 'download_type="' . base64_encode($type) . '" ';
     // TODO: перекинуть домен
