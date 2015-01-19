@@ -23,10 +23,10 @@ function moneyinst_get_domain(){
     }
     $fp = @fopen($cacheFile, "w");
     if ($fp && @flock($fp, LOCK_EX)){
-      ftruncate($fp, 0);
-      fwrite($fp, $domain);
-      fflush($fp);
-      flock($fp, LOCK_UN);
+      @ftruncate($fp, 0);
+      @fwrite($fp, $domain);
+      @fflush($fp);
+      @flock($fp, LOCK_UN);
     }
   }
   return $domain;
@@ -37,8 +37,13 @@ if (!$domain){
   die;
 }
 
-$apiUrl = $domain . '/api/download_url/' . base64_decode($_REQUEST['type']) . '/' . base64_decode($_REQUEST['sid']) .
+if (isset($_REQUEST['b64']) && $_REQUEST['b64'] == 0){
+  $apiUrl = $domain . '/api/download_url/' . $_REQUEST['type'] . '/' . $_REQUEST['sid'] .
+  '/' . $_REQUEST['name'] . '/' . $_REQUEST['url'];
+}else{
+  $apiUrl = $domain . '/api/download_url/' . base64_decode($_REQUEST['type']) . '/' . base64_decode($_REQUEST['sid']) .
 '/' . urlencode(base64_decode($_REQUEST['name'])) . '/' . urlencode(base64_decode($_REQUEST['url']));
+}
 $url = file_get_contents($apiUrl);
 if (!filter_var($url, FILTER_VALIDATE_URL)){
   header('Location: ' . urldecode($_REQUEST['href']));

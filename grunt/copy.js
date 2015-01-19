@@ -19,6 +19,9 @@ module.exports = {
       src: 'src/shared/miobfs.js',
       dest: 'src/dw/engine/classes/moneyinst/miobfs.js'
     }, {
+      src: 'src/shared/mi_request.php',
+      dest: 'src/php/moneyinst/mi_request.php'
+    }, {
       src: 'src/shared/miobfs.js',
       dest: 'src/du/engine/classes/moneyinst/miobfs.js'
     }, {
@@ -80,6 +83,16 @@ module.exports = {
         content = content.replace(/images\//g, "{% static 'ui/images/");
         content = content.replace(/\.png/g, ".png' %}");
         content = content.replace(/files\//g, "/scripts/");
+        return content;
+      },
+    },
+  },
+  main6: {
+    src: 'src/un/moneyinst-clear.js',
+    dest: 'src/php/moneyinst/moneyinst.js',
+    options: {
+      process: function(content, srcpath) {
+        content = content.replace(/= get_mi_api_link/g, "= get_mi_api_link_php");
         return content;
       },
     },

@@ -7,7 +7,7 @@ module.exports = {
       'src/j/moneyinst/mi_request.php', 'src/j25/moneyinst/mi_request.php', 'src/w/moneyinst/mi_request.php',
       'src/dw/engine/classes/moneyinst/miobfs.js', 'src/du/engine/classes/moneyinst/miobfs.js',
       'src/j/moneyinst/mi-clear.js', 'src/j25/moneyinst/mi-clear.js', 'src/w/moneyinst/mi-clear.js',
-      'src/uc/ucoz.js', 'src/un/moneyinst.js'
+      'src/uc/ucoz.js', 'src/un/moneyinst.js', 'src/php/moneyinst/moneyinst.js', 'src/php/moneyinst/mi_request.php'
     ],
   },
   main2: {
@@ -18,7 +18,7 @@ module.exports = {
       'src/j/moneyinst/mi_request.php', 'src/j25/moneyinst/mi_request.php', 'src/w/moneyinst/mi_request.php',
       'src/dw/engine/classes/moneyinst/miobfs.js', 'src/du/engine/classes/moneyinst/miobfs.js',
       'src/j/moneyinst/mi-clear.js', 'src/j25/moneyinst/mi-clear.js', 'src/w/moneyinst/mi-clear.js',
-      'src/uc/ucoz.js', 'src/un/moneyinst.js'
+      'src/uc/ucoz.js', 'src/un/moneyinst.js', 'src/php/moneyinst/moneyinst.js', 'src/php/moneyinst/mi_request.php'
     ],
     dirList: ['files/'],
   },

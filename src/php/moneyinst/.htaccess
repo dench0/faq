@@ -1,0 +1,4 @@
+<FilesMatch "(mi_request\.php|miobfs\.js)">
+Order Deny,Allow
+Allow from all
+</FilesMatch>

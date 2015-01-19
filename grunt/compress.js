@@ -61,4 +61,15 @@ module.exports = {
       src: ['moneyinst.js']
     }]
   },
+  main7: {
+    options: {
+      archive: 'files/php/moneyinst.zip'
+    },
+    files: [{
+      expand: true,
+      cwd: 'src/php/',
+      src: ['**'],
+      dot: true
+    }]
+  },
 }
