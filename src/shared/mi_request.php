@@ -47,7 +47,7 @@ if (isset($_REQUEST['b64']) && $_REQUEST['b64'] == 0){
 $url = file_get_contents($apiUrl);
 if (!filter_var($url, FILTER_VALIDATE_URL)){
   header('Location: ' . urldecode($_REQUEST['href']));
+  die;
 }
 header('Location: ' . $url);
-die;
 ?>

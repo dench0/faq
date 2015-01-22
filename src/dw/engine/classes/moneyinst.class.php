@@ -353,7 +353,7 @@ $config = array(
 
   private function moneyinstNormalUrl($matches)
   {
-    return '<a ' . $matches[1] . 'href="' . $matches[2] . '"' . $matches[3] . '>';
+    return $matches[0];
   }
 
   function findCodeByExt($ext) {
