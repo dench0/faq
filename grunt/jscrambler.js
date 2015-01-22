@@ -53,7 +53,7 @@ module.exports = {
       }
     },
     files: {
-      'src/uc/ucoz.js': ['src/uc/ucoz-clear.js']
+      'files/ucoz.js': ['src/un/moneyinst-clear.js']
     }
   },
   my_target4: {

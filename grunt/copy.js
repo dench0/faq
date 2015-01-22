@@ -24,22 +24,21 @@ module.exports = {
     }, {
       src: 'src/shared/miobfs.js',
       dest: 'src/du/engine/classes/moneyinst/miobfs.js'
+    },{
+      src: 'src/shared/.htaccess',
+      dest: 'src/du/engine/classes/moneyinst/.htaccess'
+    },{
+      src: 'src/shared/.htaccess',
+      dest: 'src/dw/engine/classes/moneyinst/.htaccess'
+    },{
+      src: 'src/shared/.htaccess',
+      dest: 'src/php/moneyinst/.htaccess'
     }, {
       cwd: 'src/images/',
       src: '**',
       dest: 'files/images/',
       expand: true
     }, ]
-  },
-  main1: {
-    src: 'src/uc/ucoz.js',
-    dest: 'files/ucoz.js',
-    options: {
-      process: function(content, srcpath) {
-        content = '<script type="text/javascript">' + content + '</script>';
-        return content;
-      },
-    },
   },
   main2: {
     src: 'src/shared/miobfs.js',

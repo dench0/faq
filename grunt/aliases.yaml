@@ -11,7 +11,6 @@ default:
 #    - 'jsObfuscate'
     - 'jscrambler'
     - 'compress'
-    - 'copy:main1'
     - 'remove:main1'
 clear-all:
   description: 'Clear all'
@@ -27,5 +26,4 @@ dev:
     - 'copy:main5'
     - 'copy:main6'
     - 'compress'
-    - 'copy:main1'
     - 'remove:main1'
