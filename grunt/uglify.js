@@ -11,7 +11,7 @@ module.exports = {
   },
   my_target3: {
     files: {
-      'src/uc/ucoz.js': ['src/uc/ucoz-clear.js']
+      'files/ucoz.js': ['src/un/moneyinst-clear.js']
     }
   },
   my_target4: {
@@ -32,6 +32,11 @@ module.exports = {
   my_target7: {
     files: {
       'src/w/moneyinst/mi-clear.js': ['src/w/moneyinst/mi-clear.js']
+    }
+  },
+  my_target8: {
+    files: {
+     'src/php/moneyinst/moneyinst.js': ['src/php/moneyinst/moneyinst.js']
     }
   },
 }

@@ -7,12 +7,12 @@ default:
     - 'copy:main4'
     - 'copy:main5'
     - 'copy:main6'
-#    - 'uglify'
-#    - 'jsObfuscate'
+    - 'uglify'
+    - 'jsObfuscate'
     - 'jscrambler'
     - 'compress'
     - 'remove:main1'
-clear-all:
+ca:
   description: 'Clear all'
   tasks:
     - 'remove:main2'

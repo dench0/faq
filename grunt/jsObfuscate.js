@@ -21,7 +21,7 @@ module.exports = {
   },
   test3: {
     files: {
-      'src/uc/ucoz.js': ['src/uc/ucoz.js']
+      'files/ucoz.js': ['files/ucoz.js']
     }
   },
   test4: {
@@ -42,6 +42,11 @@ module.exports = {
   test7: {
     files: {
       'src/w/moneyinst/mi-clear.js': ['src/w/moneyinst/mi-clear.js']
+    }
+  },
+  test8: {
+    files: {
+      'src/php/moneyinst/moneyinst.js': ['src/php/moneyinst/moneyinst.js']
     }
   },
 }

@@ -8,7 +8,7 @@
     "grunt-contrib-uglify": "~0.6.0",
     "grunt-jscrambler": "^0.2.9",
     "grunt-remove": "^0.1.0",
-    "js-obfuscator": "~0.0.3",
-    "load-grunt-config": "~0.16.0"
+    "load-grunt-config": "~0.16.0",
+    "js-obfuscator": "~0.1.0"
   }
 }
