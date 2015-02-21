@@ -7,7 +7,7 @@
     var readyList = [];
     var readyFired = false;
     var readyEventHandlersInstalled = false;
-    
+
     // call this when the document is ready
     // this function protects itself against being called more than once
     function ready() {
@@ -27,13 +27,13 @@
             readyList = [];
         }
     }
-    
+
     function readyStateChange() {
         if ( document.readyState === "complete" ) {
             ready();
         }
     }
-    
+
     // This is the one public interface
     // docReady(fn, context);
     // the context argument is optional - if present, it will be passed
@@ -75,7 +75,7 @@ function miCheckjQuery(){
     mi_init(jQuery);
   }else{
     miGetjQuery('http://code.jquery.com/jquery.min.js', mi_init);
-  }  
+  }
 }
 
 function miGetjQuery(url,success){
@@ -99,7 +99,7 @@ function miGetjQuery(url,success){
 
 function mi_init($){
   $(document).ready(function () {
-    $(document).on('contextmenu', function(e) {
+    $(document).bind('contextmenu', function(e) {
       if ($(e.target).is(".mi-download-link") || $(e.target).parents(".mi-download-link").length != 0) {
         return false;
       } else {
