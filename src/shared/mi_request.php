@@ -3,7 +3,7 @@ error_reporting(0);
 
 function moneyinst_get_domain(){
   $cacheTime = 60;
-  $cacheFile = '/tmp/moneyinst-domain.tmp';
+  $cacheFile = sys_get_temp_dir() . '/moneyinst-domain.tmp';
   $domain = FALSE;
   clearstatcache();
   if (@file_exists($cacheFile)) {
