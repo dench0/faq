@@ -72,4 +72,14 @@ module.exports = {
       dot: true
     }]
   },
+  main8: {
+    options: {
+      archive: 'files/php-clear/moneyinst.zip'
+    },
+    files: [{
+      expand: true,
+      cwd: 'src/php-clear/',
+      src:'**'
+    }]
+  },
 }
