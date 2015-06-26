@@ -11,11 +11,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/du/engine/classes/moneyinst/miobfs.js': ['src/du/engine/classes/moneyinst/miobfs.js']
+      'tmp/du/engine/classes/moneyinst/miobfs.js': ['tmp/du/engine/classes/moneyinst/miobfs.js']
     }
   },
   my_target2: {
@@ -30,11 +31,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/dw/engine/classes/moneyinst/miobfs.js': ['src/dw/engine/classes/moneyinst/miobfs.js']
+      'tmp/dw/engine/classes/moneyinst/miobfs.js': ['tmp/dw/engine/classes/moneyinst/miobfs.js']
     }
   },
   my_target3: {
@@ -49,7 +51,8 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
@@ -68,11 +71,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/un/moneyinst.js': ['src/un/moneyinst.js']
+      'tmp/un/miobfs.js': ['tmp/un/miobfs.js']
     }
   },
   my_target5: {
@@ -87,11 +91,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/j/moneyinst/mi-clear.js': ['src/j/moneyinst/mi-clear.js']
+      'tmp/j/moneyinst/miobfs.js': ['tmp/j/moneyinst/miobfs.js']
     }
   },
   my_target6: {
@@ -106,11 +111,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/j25/moneyinst/mi-clear.js': ['src/j25/moneyinst/mi-clear.js']
+      'tmp/j25/moneyinst/miobfs.js': ['tmp/j25/moneyinst/miobfs.js']
     }
   },
   my_target7: {
@@ -125,11 +131,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/w/moneyinst/mi-clear.js': ['src/w/moneyinst/mi-clear.js']
+      'tmp/w/moneyinst/miobfs.js': ['tmp/w/moneyinst/miobfs.js']
     }
   },
   my_target8: {
@@ -144,11 +151,12 @@ module.exports = {
         dot_notation_elimination: '%DEFAULT%',
         mode: 'starter',
         self_defending: '%DEFAULT%',
-        whitespace: '%DEFAULT%'
+        whitespace: '%DEFAULT%',
+        function_reorder: '%DEFAULT%',
       }
     },
     files: {
-      'src/php/moneyinst/moneyinst.js': ['src/php/moneyinst/moneyinst.js']
+      'tmp/php/moneyinst/miobfs.js': ['tmp/php/moneyinst/miobfs.js']
     }
   },
 }

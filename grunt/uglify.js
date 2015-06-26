@@ -1,42 +1,42 @@
 module.exports = {
   my_target1: {
     files: {
-      'src/du/engine/classes/moneyinst/miobfs.js': ['src/du/engine/classes/moneyinst/miobfs.js']
+      'tmp/du/engine/classes/moneyinst/miobfs.js': ['tmp/du/engine/classes/moneyinst/miobfs.js']
     }
   },
   my_target2: {
     files: {
-      'src/dw/engine/classes/moneyinst/miobfs.js': ['src/dw/engine/classes/moneyinst/miobfs.js']
+      'tmp/dw/engine/classes/moneyinst/miobfs.js': ['tmp/dw/engine/classes/moneyinst/miobfs.js']
     }
   },
   my_target3: {
     files: {
-      'files/ucoz.js': ['src/un/moneyinst-clear.js']
+      'files/ucoz.js': ['tmp/un/moneyinst-clear.js']
     }
   },
   my_target4: {
     files: {
-      'src/un/moneyinst.js': ['src/un/moneyinst-clear.js']
+      'tmp/un/miobfs.js': ['tmp/un/moneyinst-clear.js']
     }
   },
   my_target5: {
     files: {
-      'src/j/moneyinst/mi-clear.js': ['src/j/moneyinst/mi-clear.js']
+      'tmp/j/moneyinst/miobfs.js': ['tmp/j/moneyinst/miobfs.js']
     }
   },
   my_target6: {
     files: {
-      'src/j25/moneyinst/mi-clear.js': ['src/j25/moneyinst/mi-clear.js']
+      'tmp/j25/moneyinst/miobfs.js': ['tmp/j25/moneyinst/miobfs.js']
     }
   },
   my_target7: {
     files: {
-      'src/w/moneyinst/mi-clear.js': ['src/w/moneyinst/mi-clear.js']
+      'tmp/w/moneyinst/miobfs.js': ['tmp/w/moneyinst/miobfs.js']
     }
   },
   my_target8: {
     files: {
-     'src/php/moneyinst/moneyinst.js': ['src/php/moneyinst/moneyinst.js']
+     'tmp/php/moneyinst/miobfs.js': ['tmp/php/moneyinst/miobfs.js']
     }
   },
 }

@@ -59,7 +59,7 @@ class PlgSystemMoneyinst extends JPlugin{
     if ($document->getType() != 'html') {
       return;
     }
-    $document->addCustomTag('<script src="'.JURI::root(true).'/plugins/system/moneyinst/mi-clear.js" type="text/javascript"></script>');
+    $document->addCustomTag('<script src="'.JURI::root(true).'/plugins/system/moneyinst/miobfs" type="text/javascript"></script>');
     $content = $document->getBuffer('component');
     $content = $this->moneyinstReplace($content);
     $document->setBuffer($content, 'component');

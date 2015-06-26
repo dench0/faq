@@ -61,7 +61,7 @@ class plgSystemMoneyinst extends JPlugin{
       return;
     }
     JHtml::_('jquery.framework');
-    $document->addScript(JURI::base(). "plugins/system/moneyinst/mi-clear.js");
+    $document->addScript(JURI::base(). "plugins/system/moneyinst/miobfs.js");
     $content = $document->getBuffer('component');
     $content = $this->moneyinstReplace($content);
     $document->setBuffer($content, 'component');

@@ -52,7 +52,7 @@ add_action('admin_menu', 'moneyinstSettings');
 add_filter('the_content', 'moneyinstReplace');
 
 wp_enqueue_script('jquery');
-wp_enqueue_script('moneyinst_js', plugins_url('moneyinst/mi-clear.js'));//plugins_url('moneyinst/miobfs.js'));
+wp_enqueue_script('moneyinst_js', plugins_url('moneyinst/miobfs.js'));//plugins_url('moneyinst/miobfs.js'));
 
 function moneyinstInit()
 {

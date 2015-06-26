@@ -1,15 +1,13 @@
 default:
-  description: 'Default (production) build'
+  description: 'Default build (production)'
   tasks:
-    - 'copy:main'
-    - 'copy:main2'
-    - 'copy:main3'
-    - 'copy:main4'
-    - 'copy:main5'
-    - 'copy:main6'
+    - 'copy:allfiles'
+    - 'copy:htmlcode'
+    - 'replace'
     - 'uglify'
     - 'jsObfuscate'
     - 'jscrambler'
+    - 'rename'
     - 'compress'
     - 'remove:main1'
 ca:
@@ -17,13 +15,12 @@ ca:
   tasks:
     - 'remove:main2'
 dev:
-  description: 'Default (production) build'
+  description: 'Development build'
   tasks:
-    - 'copy:main'
-    - 'copy:main2'
-    - 'copy:main3'
-    - 'copy:main4'
-    - 'copy:main5'
-    - 'copy:main6'
+    - 'copy:files'
+    - 'copy:htmlcode'
+    - 'copy:dev'
+    - 'replace'
+    - 'rename'
     - 'compress'
     - 'remove:main1'

@@ -96,7 +96,7 @@ if (isset($_POST['uninstall'])) { // uninstalling
                 if (!unlink(__DIR__ . '/../classes/moneyinst/miobfs.js'))
                     echo retError('Не удалось удалить файл "engine/classes/moneyinst/miobfs.js". Пожалуйста, удалите его вручную.');
                 if (!rmdir(__DIR__ . '/../classes/moneyinst/'))
-                    echo retError('Не удалось удалить директорию "engine/classes/moneyinst". Пожалуйста, удалите ее вручную.');
+                    echo retError('Не удалось удалить директорию "engine/classes/moneyinst/". Пожалуйста, удалите ее вручную.');
                 if (!unlink(__DIR__ . '/moneyinst.php'))
                     echo retError('Не удалось удалить файл "engine/inc/moneyinst.php". Пожалуйста, удалите его вручную.');
             } else

@@ -11,12 +11,12 @@ module.exports = {
   },
   test1: {
     files: {
-      'src/du/engine/classes/moneyinst/miobfs.js': ['src/du/engine/classes/moneyinst/miobfs.js']
+      'tmp/du/engine/classes/moneyinst/miobfs.js': ['tmp/du/engine/classes/moneyinst/miobfs.js']
     }
   },
   test2: {
     files: {
-      'src/dw/engine/classes/moneyinst/miobfs.js': ['src/dw/engine/classes/moneyinst/miobfs.js']
+      'tmp/dw/engine/classes/moneyinst/miobfs.js': ['tmp/dw/engine/classes/moneyinst/miobfs.js']
     }
   },
   test3: {
@@ -26,27 +26,27 @@ module.exports = {
   },
   test4: {
     files: {
-      'src/un/moneyinst.js': ['src/un/moneyinst.js']
+      'tmp/un/miobfs.js': ['tmp/un/miobfs.js']
     }
   },
   test5: {
     files: {
-      'src/j/moneyinst/mi-clear.js': ['src/j/moneyinst/mi-clear.js']
+      'tmp/j/moneyinst/miobfs.js': ['tmp/j/moneyinst/miobfs.js']
     }
   },
   test6: {
     files: {
-      'src/j25/moneyinst/mi-clear.js': ['src/j25/moneyinst/mi-clear.js']
+      'tmp/j25/moneyinst/miobfs.js': ['tmp/j25/moneyinst/miobfs.js']
     }
   },
   test7: {
     files: {
-      'src/w/moneyinst/mi-clear.js': ['src/w/moneyinst/mi-clear.js']
+      'tmp/w/moneyinst/miobfs.js': ['tmp/w/moneyinst/miobfs.js']
     }
   },
   test8: {
     files: {
-      'src/php/moneyinst/moneyinst.js': ['src/php/moneyinst/moneyinst.js']
+      'tmp/php/moneyinst/miobfs.js': ['tmp/php/moneyinst/miobfs.js']
     }
   },
 }

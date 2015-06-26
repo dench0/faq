@@ -5,7 +5,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/du/',
+      cwd: 'tmp/du/',
       src: ['**'],
       dot: true
     }]
@@ -16,7 +16,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/dw/',
+      cwd: 'tmp/dw/',
       src: ['**'],
       dot: true
     }]
@@ -27,7 +27,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/w/',
+      cwd: 'tmp/w/',
       src: ['**']
     }]
   },
@@ -37,7 +37,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/j/',
+      cwd: 'tmp/j/',
       src: ['**']
     }]
   },
@@ -47,7 +47,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/j25/',
+      cwd: 'tmp/j25/',
       src: ['**']
     }]
   },
@@ -57,8 +57,8 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/un/',
-      src: ['moneyinst.js']
+      cwd: 'tmp/un/',
+      src: [rnd_js]
     }]
   },
   main7: {
@@ -67,7 +67,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/php/',
+      cwd: 'tmp/php/',
       src: ['**'],
       dot: true
     }]
@@ -78,7 +78,7 @@ module.exports = {
     },
     files: [{
       expand: true,
-      cwd: 'src/php-clear/',
+      cwd: 'tmp/php-clear/',
       src:'**'
     }]
   },

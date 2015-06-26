@@ -1,77 +1,65 @@
 module.exports = {
-  main: {
+  allfiles: {
     files: [{
-      src: 'src/shared/mi_request.php',
-      dest: 'src/du/engine/classes/moneyinst/mi_request.php'
+      cwd: 'src/',
+      src: '**',
+      dest: 'tmp/',
+      expand: true,
+      dot: true,
     }, {
-      src: 'src/shared/mi_request.php',
-      dest: 'src/dw/engine/classes/moneyinst/mi_request.php'
+      src: 'tmp/shared/mi_request.php',
+      dest: 'tmp/du/engine/classes/moneyinst/mi_request.php'
     }, {
-      src: 'src/shared/mi_request.php',
-      dest: 'src/j/moneyinst/mi_request.php'
+      src: 'tmp/shared/mi_request.php',
+      dest: 'tmp/dw/engine/classes/moneyinst/mi_request.php'
     }, {
-      src: 'src/shared/mi_request.php',
-      dest: 'src/j25/moneyinst/mi_request.php'
+      src: 'tmp/shared/mi_request.php',
+      dest: 'tmp/j/moneyinst/mi_request.php'
     }, {
-      src: 'src/shared/mi_request.php',
-      dest: 'src/w/moneyinst/mi_request.php'
+      src: 'tmp/shared/mi_request.php',
+      dest: 'tmp/j25/moneyinst/mi_request.php'
     }, {
-      src: 'src/shared/miobfs.js',
-      dest: 'src/dw/engine/classes/moneyinst/miobfs.js'
+      src: 'tmp/shared/mi_request.php',
+      dest: 'tmp/w/moneyinst/mi_request.php'
     }, {
-      src: 'src/shared/mi_request.php',
-      dest: 'src/php/moneyinst/mi_request.php'
+      src: 'tmp/shared/miobfs.js',
+      dest: 'tmp/dw/engine/classes/moneyinst/miobfs.js'
     }, {
-      src: 'src/shared/miobfs.js',
-      dest: 'src/du/engine/classes/moneyinst/miobfs.js'
-    },{
-      src: 'src/shared/.htaccess',
-      dest: 'src/du/engine/classes/moneyinst/.htaccess'
-    },{
-      src: 'src/shared/.htaccess',
-      dest: 'src/dw/engine/classes/moneyinst/.htaccess'
-    },{
-      src: 'src/shared/.htaccess',
-      dest: 'src/php/moneyinst/.htaccess'
+      src: 'tmp/shared/miobfs.js',
+      dest: 'tmp/du/engine/classes/moneyinst/miobfs.js'
     }, {
-      cwd: 'src/images/',
+      src: 'tmp/shared/.htaccess',
+      dest: 'tmp/du/engine/classes/moneyinst/.htaccess'
+    }, {
+      src: 'tmp/shared/.htaccess',
+      dest: 'tmp/dw/engine/classes/moneyinst/.htaccess'
+    }, {
+      src: 'tmp/shared/mi_request.php',
+      dest: 'tmp/php/moneyinst/mi_request.php'
+    }, {
+      src: 'tmp/shared/.htaccess',
+      dest: 'tmp/php/moneyinst/.htaccess'
+    },  {
+      src: 'tmp/un/moneyinst-clear.js',
+      dest: 'tmp/php/moneyinst/miobfs.js',
+    }, {
+      src: 'tmp/shared/miobfs.js',
+      dest: 'tmp/j/moneyinst/miobfs.js',
+    }, {
+      src: 'tmp/shared/miobfs.js',
+      dest: 'tmp/j25/moneyinst/miobfs.js',
+    }, {
+      src: 'tmp/shared/miobfs.js',
+      dest: 'tmp/w/moneyinst/miobfs.js',
+    }, {
+      cwd: 'tmp/images/',
       src: '**',
       dest: 'files/images/',
       expand: true
     }, ]
   },
-  main2: {
-    src: 'src/shared/miobfs.js',
-    dest: 'src/j/moneyinst/mi-clear.js',
-    options: {
-      process: function(content, srcpath) {
-        content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g, "/plugins/system/moneyinst/mi_request.php");
-        return content;
-      },
-    },
-  },
-  main3: {
-    src: 'src/shared/miobfs.js',
-    dest: 'src/j25/moneyinst/mi-clear.js',
-    options: {
-      process: function(content, srcpath) {
-        content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g, "/plugins/system/moneyinst/mi_request.php");
-        return content;
-      },
-    },
-  },
-  main4: {
-    src: 'src/shared/miobfs.js',
-    dest: 'src/w/moneyinst/mi-clear.js',
-    options: {
-      process: function(content, srcpath) {
-        content = content.replace(/\/engine\/classes\/moneyinst\/mi_request.php/g, "/wp-content/plugins/moneyinst/mi_request.php");
-        return content;
-      },
-    },
-  },
-  main5: {
-    src: 'src/index.html',
+  htmlcode: {
+    src: 'tmp/index.html',
     dest: 'files/js_code.html',
     options: {
       process: function(content, srcpath) {
@@ -86,15 +74,14 @@ module.exports = {
       },
     },
   },
-  main6: {
-    src: 'src/un/moneyinst-clear.js',
-    dest: 'src/php/moneyinst/moneyinst.js',
-    options: {
-      process: function(content, srcpath) {
-        content = content.replace(/function get_mi_api_link[^]+?return result;[^]*?}/gmi, "");
-        content = content.replace(/var api_url = get_mi_api_link/gi, "var api_url = get_mi_api_link_php");
-        return content;
-      },
+  dev: {
+    files: [{
+      src: 'tmp/un/moneyinst-clear.js',
+      dest: 'tmp/un/miobfs.js'
     },
-  },
+    {
+      src: 'tmp/un/moneyinst-clear.js',
+      dest: 'files/ucoz.js'
+    }]
+  }
 }
